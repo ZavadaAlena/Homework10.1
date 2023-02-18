@@ -1,3 +1,5 @@
+package Task2;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -7,7 +9,7 @@ import java.util.*;
 public class Task2Test {
     public static void main(String[] args) throws IOException {
         List<User> users = new ArrayList<>();
-        try (InputStream fis = new FileInputStream("src/main/java/file2.txt");
+        try (InputStream fis = new FileInputStream("src/main/java/Task2/file2.txt");
              Scanner scanner = new Scanner(fis)) {
             while (scanner.hasNext()) {
                 String line = scanner.nextLine();
@@ -31,7 +33,7 @@ public class Task2Test {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String result = gson.toJson(users);
         System.out.println(result);
-        OutputStream fos = new FileOutputStream("users.json");
+        OutputStream fos = new FileOutputStream("src/main/java/Task2/users.json");
         fos.write(result.getBytes());
 
 

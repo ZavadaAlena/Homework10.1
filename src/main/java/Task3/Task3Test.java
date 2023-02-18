@@ -1,10 +1,12 @@
+package Task3;
+
 import java.io.*;
 import java.util.*;
 
 public class Task3Test {
     public static void main(String[] args) {
         Map<String, Integer> words = new HashMap<>();
-        try (InputStream fis = new FileInputStream("src/main/java/words.txt");
+        try (InputStream fis = new FileInputStream("src/main/java/Task3/words.txt");
              Scanner scanner = new Scanner(fis)) {
             while (scanner.hasNext()) {
                 String line = scanner.nextLine();
